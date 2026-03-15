@@ -1,0 +1,15 @@
+# Core ML
+torch>=2.0.0
+numpy>=1.24.0
+
+# Configuration management
+PyYAML>=6.0
+
+# Metrics & logging
+tensorboard>=2.13.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Progress bars
+tqdm>=4.65.0
