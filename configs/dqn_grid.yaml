@@ -1,0 +1,32 @@
+# DQN on GridWorld experiment configuration
+env: GridWorld
+env_kwargs:
+  height: 8
+  width: 8
+  n_goals: 1
+  n_hazards: 2
+  n_walls: 5
+  max_steps: 200
+
+agent_type: DQN
+agent_kwargs:
+  hidden_sizes: [128, 128]
+  lr: 0.001
+  gamma: 0.99
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 30000
+  replay_capacity: 50000
+  batch_size: 64
+  target_update_freq: 500
+
+n_episodes: 500
+max_steps_per_episode: 200
+eval_every: 50
+n_eval_episodes: 5
+run_dir: runs/dqn_grid
+save_every: 50
+use_tensorboard: false
+print_every: 10
+device: cpu
+seed: 42

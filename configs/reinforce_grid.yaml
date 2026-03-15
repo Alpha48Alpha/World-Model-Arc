@@ -1,0 +1,29 @@
+# REINFORCE with baseline on GridWorld experiment configuration
+env: GridWorld
+env_kwargs:
+  height: 8
+  width: 8
+  n_goals: 1
+  n_hazards: 2
+  n_walls: 5
+  max_steps: 200
+
+agent_type: REINFORCE
+agent_kwargs:
+  hidden_sizes: [128, 128]
+  lr: 0.0003
+  gamma: 0.99
+  entropy_coef: 0.01
+  use_baseline: true
+  max_episode_steps: 500
+
+n_episodes: 500
+max_steps_per_episode: 200
+eval_every: 50
+n_eval_episodes: 5
+run_dir: runs/reinforce_grid
+save_every: 50
+use_tensorboard: false
+print_every: 10
+device: cpu
+seed: 42
